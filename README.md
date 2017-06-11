@@ -1,5 +1,7 @@
 # Drive the design of a Recently Used List using properties!
 
+[![Build Status](https://travis-ci.org/Jubobs/Poppulo-property-based-testing-workshop.svg?branch=solutions)](https://travis-ci.org/Jubobs/Poppulo-property-based-testing-workshop)
+
 This kata is intended as a hands-on introduction to
 _property-based testing_ in Java.
 Your objective is to implement an abstraction known as a
