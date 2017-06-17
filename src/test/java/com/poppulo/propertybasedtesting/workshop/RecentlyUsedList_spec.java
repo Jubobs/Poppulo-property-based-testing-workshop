@@ -1,6 +1,7 @@
 package com.poppulo.propertybasedtesting.workshop;
 
 import com.pholser.junit.quickcheck.Property;
+import com.pholser.junit.quickcheck.generator.InRange;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import org.junit.Ignore;
 import org.junit.Rule;
@@ -20,11 +21,11 @@ public final class RecentlyUsedList_spec {
         @Rule
         public final ExpectedException thrown = ExpectedException.none();
 
-        @Test
-        public void cannot_be_instantiated_with_a_nonpositive_capacity() {
-            int nonpositiveCapacity = -1;
+        @Property
+        public void cannot_be_instantiated_with_a_nonpositive_capacity(
+                @InRange(maxInt = 0) int capacity) {
             thrown.expect(IllegalArgumentException.class);
-            newInstance(nonpositiveCapacity);
+            newInstance(capacity);
         }
 
         @Ignore
