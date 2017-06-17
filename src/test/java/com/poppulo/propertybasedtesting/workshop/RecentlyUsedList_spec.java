@@ -3,9 +3,13 @@ package com.poppulo.propertybasedtesting.workshop;
 import com.pholser.junit.quickcheck.Property;
 import com.pholser.junit.quickcheck.runner.JUnitQuickcheck;
 import org.junit.Ignore;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.experimental.runners.Enclosed;
+import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
+
+import static com.poppulo.propertybasedtesting.workshop.ListBasedRecentlyUsedList.newInstance;
 
 @RunWith(Enclosed.class)
 public final class RecentlyUsedList_spec {
@@ -13,10 +17,13 @@ public final class RecentlyUsedList_spec {
     @RunWith(JUnitQuickcheck.class)
     public static final class A_new_list {
 
-        @Ignore
-        @Property
-        public void cannot_be_instantiated_with_a_nonpositive_capacity() {
+        @Rule
+        public final ExpectedException thrown = ExpectedException.none();
 
+        @Test
+        public void cannot_be_instantiated_with_a_nonpositive_capacity() {
+            thrown.expect(IllegalArgumentException.class);
+            newInstance(-1);
         }
 
         @Ignore
