@@ -22,8 +22,9 @@ public final class RecentlyUsedList_spec {
 
         @Test
         public void cannot_be_instantiated_with_a_nonpositive_capacity() {
+            int nonpositiveCapacity = -1;
             thrown.expect(IllegalArgumentException.class);
-            newInstance(-1);
+            newInstance(nonpositiveCapacity);
         }
 
         @Ignore
