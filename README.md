@@ -181,7 +181,7 @@ please submit a pull request.
 [git]: https://git-scm.com/
 [Gradle]: https://gradle.org/
 [Henney]: http://www.two-sdg.demon.co.uk/curbralan/papers/FormFollowsFunction.pdf
-[Henny-talk]: https://www.youtube.com/watch?v=ZsHMHukIlJY#t=5m15s
+[Henney-talk]: https://www.youtube.com/watch?v=ZsHMHukIlJY#t=5m15s
 [Java8]: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html
 [JUnit]: http://junit.org/junit4/
 [junit-quickcheck]: https://github.com/pholser/junit-quickcheck
