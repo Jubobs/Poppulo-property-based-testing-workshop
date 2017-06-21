@@ -16,7 +16,7 @@ First, make sure the following are installed on your machine:
 
 * [Git][git]
 * [Java 8][Java8]
-* [Gradle][Gradle]
+* [Gradle 4.x][Gradle]
 
 Then, run the following commands in a shell:
 
@@ -25,6 +25,9 @@ git clone https://github.com/Jubobs/Poppulo-property-based-testing-workshop
 cd Poppulo-property-based-testing-workshop
 gradle
 ```
+
+(If Gradle winces about the `jacocoTestCoverageVerification` task,
+make sure you're using some version 4.x of Gradle).
 
 ## What is a Recently Used List?
 
